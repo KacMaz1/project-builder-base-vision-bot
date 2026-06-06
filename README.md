@@ -2,6 +2,7 @@
 
 Projekt z botem do automatyzacji Builder Base. Glowna wersja znajduje sie w `src/bot_pico_2_fazy.py`.
 
+
 ## Struktura
 
 ```text
@@ -50,6 +51,12 @@ Najwazniejsze parametry sa na gorze plikow w `src/`. Dla wersji Pico sprawdz zwl
 - wspolrzedne triggera drugiej fazy
 
 Obrazki rozpoznawane przez OpenCV sa trzymane w `assets/templates/`. Aktywne skrypty uzywaja sciezek wzgledem katalogu projektu, wiec nie trzeba trzymac PNG w glownym folderze.
+
+## Losowosc
+
+Bot uzywa losowosci w kilku miejscach, m.in. przy czasie oczekiwania, ruchu kursora i liczbie zrzucanych smokow. W pierwszej fazie liczba smokow jest wybierana z BD_COUNTS: domyslnie 6 smokow z szansa 70% albo 7 smokow z szansa 30%.
+
+Klikniecia sa lekko losowane wokol srodka wykrytego obrazka z uzyciem rozkladu normalnego ograniczonego przez np.clip(). Czasy opoznien sa losowane z uzyciem rozkladu log-normalnego, dzieki czemu wiekszosc przerw jest podobna, ale czasami trafiaja sie dluzsze opoznienia.
 
 ## Mikrokontroler
 
