@@ -73,15 +73,3 @@ U          # puszczenie lewego przycisku
 Kazda komenda jest wysylana jako osobna linia zakonczona `\n`. Przyklad: `M 12 -4`.
 
 Kod firmware mikrokontrolera nie jest obecnie czescia repozytorium. Ten projekt zaklada, ze Pico jest juz wgrane i dostepne pod portem ustawionym w `PICO_PORT`.
-
-## Pierwszy push na GitHub
-
-Repozytorium Git jest juz zainicjalizowane lokalnie. Po utworzeniu pustego repo na GitHubie:
-
-```powershell
-git add .
-git commit -m "Initial project cleanup"
-git branch -M main
-git remote add origin https://github.com/TWOJ_LOGIN/TWOJE_REPO.git
-git push -u origin main
-```
